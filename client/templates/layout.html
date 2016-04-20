@@ -1,0 +1,14 @@
+<template name="layout">
+  <!-- Add bootstrap styling -->
+  <!-- This will show up on every page -->
+  <nav class="navbar navbar-inverse">
+    {{>yield 'nav'}}
+  </nav>
+
+  {{> yield}}
+
+  <div class="container">
+    {{> yield 'footer'}}
+  </div>
+
+</template>

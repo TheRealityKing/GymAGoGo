@@ -1,0 +1,9 @@
+1) Deal with database publications - data needs to be private and regulated
+   User account restricted content
+   Restricted routes
+2) Profile pages for users
+3) Location based searching
+4) Smarter routes - login needs to send user to page they were required to log in form
+5) Validation
+6) Center login/register page
+7) Search button onclick -> form
