@@ -6,14 +6,27 @@ Template.register.events({
       //add error checking
       Accounts.createUser({
           username: uname,
-          password: pass
+          password: pass,
+          profile: {
+            zip: null,
+            city: null,
+            age: null,
+            interests: null,
+            profilePic: null
+          }
         }, function(error){
           if(error){
             console.log(error.reason);
-            //TODO: append error message to DOM
+            var log = document.getElementById('psRegister');
+            var pd = document.getElementById('pdRegister');
+            pd.className='form-group has-error';
+            //log.id='inputError';
+            console.log(pd);
+            log.value='';
+            log.placeholder=error.reason;
           }
           else{
-            Router.go('home');
+            Router.go('update');
           }}
       );
   }

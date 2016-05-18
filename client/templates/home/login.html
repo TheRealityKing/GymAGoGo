@@ -1,8 +1,28 @@
 <template name="login">
-    <h2>Log into Gym-A-Go-Go</h2>
-    <form class="login">
-        <input type="text" placeholder="Username" name="unameLogin"><br />
-        <input type="password" placeholder="Password" name="passwordLogin" id="pslogin">
-        <p><input type="submit" value="login"></p>
-    </form>
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-4 center-block col-centered">
+      <form class="form-horizontal">
+        <fieldset>
+          <legend>Login</legend>
+          <div class="form-group">
+            <div class="col-lg-10">
+              <input type="text" class="form-control" placeholder="Username" name="unameLogin">
+            </div>
+          </div>
+          <div class="form-group" id="pdlogin">
+            <div class="col-lg-10">
+              <input type="password" class="form-control" placeholder="Password" name="passwordLogin" id="pslogin">
+            </div>
+          </div>
+          <!--TODO: MAKE A BETTER BUTTON -->
+          <p><input type="submit" class='btn btn-primary' value="login"></p>
+          <!--<button type='button' class='btn btn-primary' value='login'>login</button>-->
+          <!--<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+                  title="Tooltip on right">Tooltip on right</button> -->
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
 </template>

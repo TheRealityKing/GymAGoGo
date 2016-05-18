@@ -6,9 +6,12 @@ Template.login.events({
     Meteor.loginWithPassword(uname,pass,function(error){
       if(error){
         console.log(error);
-        //clear password field
-        document.getElementById('pslogin').value='';
-        //TODO: append error message to DOM
+        var log = document.getElementById('pslogin');
+        var pd = document.getElementById('pdlogin');
+        pd.className='form-group has-error';
+        console.log(pd);
+        log.value='';
+        log.placeholder=error.reason;
       }
       else{
         Router.go('home');

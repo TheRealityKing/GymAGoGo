@@ -1,8 +1,27 @@
 <template name="register">
-  <h2>Register</h2>
-  <form class="register">
-    <p>Username: <input type="text" name="unameRegister"></p>
-    <p>Password: <input type="password" name="passwordRegister"></p>
-    <p><input type="submit" value="submit"></p>
-  </form>
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-4 center-block col-centered">
+      <form class="form-horizontal">
+        <fieldset>
+          <legend>Register</legend>
+          <div class="form-group">
+            <div class="col-lg-10">
+              <input type="text" class="form-control" placeholder="Username" name="unameRegister">
+            </div>
+          </div>
+          <div class="form-group" id="pdRegister">
+            <div class="col-lg-10">
+              <input type="password" class="form-control" placeholder="Password" name="passwordRegister" id="psRegister">
+            </div>
+          </div>
+          <!--TODO: MAKE A BETTER BUTTON -->
+          <p><input type="submit" class='btn btn-primary' value="login"></p>
+          <!--<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+                  title="Tooltip on right">Tooltip on right</button> -->
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
 </template>

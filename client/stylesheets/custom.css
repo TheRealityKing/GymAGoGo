@@ -1,0 +1,45 @@
+.navbar { /* TODO: Only remove bottom margin on home page!!!! */
+  margin-bottom: 0px;
+}
+.jumbotron {
+  position: relative;
+  /*background: #000 url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.brandedscreenprinting.com%2Fwp-content%2Fuploads%2FNew-Years-Fitness-Screen-Printing1.jpg&sp=45990d1181e8599814c956a40eccc782") center center;*/
+  background:
+    linear-gradient(
+      rgba(72, 72, 72, 0.75),
+      rgba(72, 72, 72, 0.75)
+      ),
+    url("/hero1.jpeg") center center;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  overflow: hidden;
+  background-size: cover;
+  min-height: 610px;
+}
+
+#jtext {
+  color: #4582ec;
+  color: #fff;
+}
+
+.heroOverlap {
+  position: absolute;
+  max-height: 150px;
+  margin: -115px 0 -20px 550px;
+  z-index: 999;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+#test {
+  min-height: 500px;
+  background-color: #FFFFFF;
+}
+
+
+.col-sm-2.form-control-label {
+  /*padding-right: 0px;*/
+}

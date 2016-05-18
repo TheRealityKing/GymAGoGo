@@ -1,9 +1,12 @@
-1) Deal with database publications - data needs to be private and regulated
+1) *** Deal with database publications - data needs to be private and regulated
    User account restricted content
    Restricted routes
 2) Profile pages for users
 3) Location based searching
-4) Smarter routes - login needs to send user to page they were required to log in form
-5) Validation
-6) Center login/register page
 7) Search button onclick -> form
+8) Fix navbar problem with hero
+10) Get Started button -> onclick slide screen down
+11) Navbar follows down after hero on home page
+12) Hero text sizing, text inside button larger
+13) Area under hero/static navbar after scroll past hero
+14) Make update page only update changed stuff
