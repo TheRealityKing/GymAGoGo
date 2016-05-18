@@ -29,6 +29,11 @@
   z-index: 999;
 }
 
+#info {
+
+  padding-top: 30px;
+}
+
 .col-centered {
   float: none;
   margin: 0 auto;
