@@ -1,6 +1,26 @@
 <template name="profile">
-    <h2>{{username}}'s Profile</h2>
+  <!--<div class="jumbotron jumbotron-fluid">
+    <div class="container" id="jtext">
+      <br><br>
+      <br><br>
+      <br>
+      <h2>Find Your Personal Trainer</h2>
+      <p>Your workout is a click away!</p>
+      <button type='button' class='btn btn-success btn-lg'>Get Started ></button>
+
+      <p class="lead"></p>
+    </div>
+  </div> -->
+  <div id="profileBanner">
+    <h1 id="profileBannerText">{{profile.firstName}} {{profile.lastName}}</h1>
+  </div>
+  <img src="{{ppic}}" id="profilePictureOverlay">
+
+  <div class="row" id="firstRow">
+    <div class="container" id="profileInfo">
+
+    </div>
+  </div>
     <!--{{profile.profilePic}}-->
-    <img src="{{ppic}}">
 
 </template>

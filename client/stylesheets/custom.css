@@ -48,3 +48,29 @@
 .col-sm-2.form-control-label {
   /*padding-right: 0px;*/
 }
+
+#profileBanner{
+  min-height: 200px;
+  min-width: 100%;
+  background-color: #4582ec;
+}
+
+#profilePictureOverlay{
+  position: absolute;
+  max-height: 250px;
+  min-height: 250px;
+  margin: -135px 0 -20px 100px;
+  padding:1px;
+  border:1px solid white;
+  background-color:black;
+}
+
+#profileBannerText{
+  position: absolute;
+  margin: 160px 0px 0px 375px;
+  color: white;
+}
+
+#profileInfo{
+  min-height: 500px;
+}
