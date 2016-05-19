@@ -10,3 +10,4 @@
 12) Hero text sizing, text inside button larger
 13) Area under hero/static navbar after scroll past hero
 14) Make update page only update changed stuff
+15) Fix update route + add more update options
