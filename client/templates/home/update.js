@@ -5,12 +5,13 @@ Template.update.events({
       var pfirst = event.target.inputFirstName.value;
       var plast = event.target.inputLastName.value;
       var pcity = event.target.inputCity.value;
+      var pstate = event.target.inputState.value;
       var pzip = event.target.inputAreaCode.value;
       var page = event.target.inputAge.value;
       //var pgender = event.target.inputGender.value;
       //var pinterests = event.target.inputInterests.value;
       //var ppic = event.target.inputProfilePic.value;
-      var ppic = "blankprofile.jpeg";
+      var ppic = "arnold1.jpeg";
       var user = Meteor.user()._id;
       if(pcity == ""){
       console.log("ITS NULL?");
@@ -53,6 +54,15 @@ Template.update.events({
         }
       });
     }
+    if(pstate != ""){
+      Meteor.users.update({_id:user}, { $set: {
+        "profile.state": pstate,
+      } }, function(error){
+        if(error){
+        console.log("error");
+      }
+    });
+  }
       if(pzip != ""){
         Meteor.users.update({_id:Meteor.user()._id}, { $set: {
           "profile.zip": pzip,

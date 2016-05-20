@@ -4,6 +4,12 @@ Template.profile.events({
 
 Template.profile.helpers({
   ppic: function(){
-    return "/blankprofile.jpeg";
+    //console.log("/"+Meteor.user().profile.profilePic);
+    //return "/blankprofile.jpeg
+    //console.log(Meteor.user().profile.profilePic);
+    return "/" + Meteor.user().profile.profilePic;
+  },
+  trunc: function(){
+    return Meteor.user().profile.lastName[0];
   }
 });

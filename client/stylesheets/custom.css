@@ -17,6 +17,10 @@
   min-height: 610px;
 }
 
+.container.with-top{
+  margin-top: 25px;
+}
+
 #jtext {
   color: #4582ec;
   color: #fff;
@@ -56,21 +60,52 @@
 }
 
 #profilePictureOverlay{
-  position: absolute;
   max-height: 250px;
   min-height: 250px;
-  margin: -135px 0 -20px 100px;
+  max-width: 275px;
+
   padding:1px;
-  border:1px solid white;
-  background-color:black;
+  /*border:1px solid white;
+  background-color:black;*/
+  border-radius: 25px;
 }
 
 #profileBannerText{
-  position: absolute;
-  margin: 160px 0px 0px 375px;
   color: white;
+  margin-bottom: 0px;
+}
+#firstRow{
+  min-height: 300px;
+  margin-top: 60px;
+}
+#profileInfo{
+  min-height: 250px;
 }
 
-#profileInfo{
-  min-height: 500px;
+.profileInfoText{
+  position: absolute;
+  margin: 150px 0px 0px 375px;
+
+}
+#bioBackground{
+  position: relative;
+  top: -200px;
+}
+
+#infoOverlay{
+  margin-top: 30px;
+  min-height: 220px;
+  max-height: 220px;
+  z-scale: 999;
+}
+
+#cityText{
+  color: white;
+  margin-top: 0px;
+}
+
+#scheduleOverlay{
+  min-height: 220px;
+  max-height: 220px;
+  z-scale: 999;
 }
