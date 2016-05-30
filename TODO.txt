@@ -1,14 +1,28 @@
-1) *** Deal with database publications - data needs to be private and regulated
+TODO:
+*** Deal with database publications - data needs to be private and regulated
    User account restricted content
    Restricted routes
-2) Profile pages for users
-3) Location based searching
-7) Search button onclick -> form
-8) Fix navbar problem with hero
-10) Get Started button -> onclick slide screen down
-11) Navbar follows down after hero on home page
-12) Hero text sizing, text inside button larger
-13) Area under hero/static navbar after scroll past hero
-14) Make update page only update changed stuff
-15) Fix update route + add more update options
-16) User upload profile pic... RIP
+   NOTE: user.profile is autopublished to client ALWAYS, and client ALWAYS
+   can change the values inside it. This is extremely bad especially if the
+   user tries to update a value such as isAdmin=true; They would now have
+   admin privileges!
+   Meteor.users.deny({
+    update() { return true; }
+   });
+   This code will deny all client-side updates to the user documents(disabling
+   insecure will not change this.)
+Profile pages for users
+Location based searching
+Search button onclick -> form
+Get Started button -> onclick slide screen down
+Navbar follows down after hero on home page
+Hero text sizing, text inside button larger
+Area under hero/static navbar after scroll past hero
+User upload profile pic... RIP
+Search routing
+
+COMPLETED:
+Better interests data handling
+profile bio
+location margin-top
+Fix update route + add more update options

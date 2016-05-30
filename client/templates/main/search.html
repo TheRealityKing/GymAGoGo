@@ -1,0 +1,19 @@
+<template name='search'>
+  <div class="container">
+    <h1>UR SEARCH: {{data}}</h1>
+    <ul class="list-group">
+      {{#each results}}
+      <li class="list-group-item">
+      <div class="row">
+        <div class="col-sm-3">
+        <a href="{{pathFor 'profile' _id=this._id}}"><img src="{{ppic}}" id="searchPic"></a>
+        </div>
+        <div class="col-sm-6">
+          <a href="{{pathFor 'profile' _id=this._id}}" id="searchName"><h2>{{name}}</h2></a>
+        </div>
+      </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

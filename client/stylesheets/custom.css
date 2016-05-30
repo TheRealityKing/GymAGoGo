@@ -75,7 +75,7 @@
   margin-bottom: 0px;
 }
 #firstRow{
-  min-height: 300px;
+  min-height: 275px;
   margin-top: 60px;
 }
 #profileInfo{
@@ -108,4 +108,20 @@
   min-height: 220px;
   max-height: 220px;
   z-scale: 999;
+}
+
+#interestText{
+
+}
+
+#searchPic{
+  max-height: 200px;
+  min-height: 200px;
+  border-radius: 25px;
+}
+
+#searchName{
+  color: #4582ec;
+  text-decoration: none;
+  hover: black;
 }

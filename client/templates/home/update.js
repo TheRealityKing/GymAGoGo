@@ -9,13 +9,15 @@ Template.update.events({
       var pzip = event.target.inputAreaCode.value;
       var page = event.target.inputAge.value;
       //var pgender = event.target.inputGender.value;
-      //var pinterests = event.target.inputInterests.value;
+      var pints = [];
+      pints[0] = event.target.cb1.checked;
+      pints[1] = event.target.cb2.checked;
+      pints[2] = event.target.cb3.checked;
       //var ppic = event.target.inputProfilePic.value;
       var ppic = "arnold1.jpeg";
+      var pbio = event.target.inputBio.value;
       var user = Meteor.user()._id;
-      if(pcity == ""){
-      console.log("ITS NULL?");
-    }
+
       /*
       HTTP.call('GET',ppic,{},function(error,response){
         if(error){
@@ -31,18 +33,18 @@ Template.update.events({
           "profile.firstName": pfirst,
         } }, function(error){
           if(error){
-          console.log("error");
-        }
-      });
+            console.log(error);
+          }
+        });
       }
       if(plast != ""){
-        Meteor.users.update({_id:Meteor.user()._id}, { $set: {
+        Meteor.users.update({_id:user}, { $set: {
           "profile.lastName": plast,
         } }, function(error){
           if(error){
-          console.log("error");
-        }
-      });
+            console.log(error);
+          }
+        });
       }
 
       if(pcity != ""){
@@ -50,72 +52,64 @@ Template.update.events({
           "profile.city": pcity,
         } }, function(error){
           if(error){
-          console.log("error");
-        }
-      });
-    }
-    if(pstate != ""){
-      Meteor.users.update({_id:user}, { $set: {
-        "profile.state": pstate,
-      } }, function(error){
-        if(error){
-        console.log("error");
+            console.log(error);
+          }
+        });
       }
-    });
-  }
+      if(pstate != ""){
+        Meteor.users.update({_id:user}, { $set: {
+          "profile.state": pstate,
+        } }, function(error){
+        if(error){
+          console.log(error);
+          }
+        });
+      }
       if(pzip != ""){
-        Meteor.users.update({_id:Meteor.user()._id}, { $set: {
+        Meteor.users.update({_id:user}, { $set: {
           "profile.zip": pzip,
         } }, function(error){
           if(error){
-          console.log("error");
-        }
-      });
+            console.log(error);
+          }
+        });
       }
       if(page != ""){
-        Meteor.users.update({_id:Meteor.user()._id}, { $set: {
+        Meteor.users.update({_id:user}, { $set: {
           "profile.age": page,
         } }, function(error){
           if(error){
-          console.log("error");
-        }
-      });
+            console.log(error);
+          }
+        });
       }
-      /*if(pgender != ""){
-        Meteor.users.update({_id:Meteor.user()._id}, { $set: {
-        "profile.gender": pgender,
-        } }, function(error){
-          if(error){
-          console.log("error");
-        }
+      /* UPDATE INTERESTS*/
+      Meteor.users.update({_id:user}, { $set: {
+        "profile.interests": [
+          pints[0],
+          pints[1],
+          pints[2]
+        ]}
       });
-    }*/
+
       if(ppic != ""){
-        Meteor.users.update({_id:Meteor.user()._id}, { $set: {
+        Meteor.users.update({_id:user}, { $set: {
         "profile.profilePic": ppic
         } }, function(error){
           if(error){
           console.log("error");
-        }
-      });
-    }
-    //TODO: FIX THIS ROUTE
-    //Router.go('profile');
-      //Router.go("profile", Meteor.user()._id);
-      /*Meteor.users.update({_id:Meteor.user()._id}, { $set: {
-        "profile.city": pcity,
-        "profile.zip": pzip,
-        "profile.age": page,
-        "profile.gender": pgender,
-        "profile.interests": null,
-        "profile.profilePic": ppic
-      } }, function(error){
-        if(error){
-        console.log("error update");
+          }
+        });
       }
-      else{
-        //Router.go("/profile/");
+      if(pbio != ""){
+        Meteor.users.update({_id:user}, { $set: {
+          "profile.profileBio": pbio
+        } }, function(error){
+          if(error){
+            console.log("error");
+          }
+        });
       }
-    });*/
+      Router.go('profile', {_id: Meteor.userId()});
   }
 });

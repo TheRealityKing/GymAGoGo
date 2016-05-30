@@ -10,17 +10,23 @@
     <div class="col-xs-7 col-md-5" id="infoOverlay">
       <h1 id="profileBannerText">{{profile.firstName}} {{trunc}}.</h1>
       <h2 id="cityText">{{profile.city}}, {{profile.state}}</h2>
+      <p id="interestText">
+        Specialties<br>
+        {{#each pint}}
+          {{this}}<br>
+        {{/each}}
+      </p>
       <!--TODO: Add more info -->
     </div>
-    <div class="col-xs-5 col-md-3" id="scheduleOverlay">
-      <!--TODO: Hourly rates -->
+  </div>
+  <div class="row">
+    <!--TODO: User Bio -->
+    <div class=col-sm-8>
+      {{profile.profileBio}}
     </div>
-    <div class="row">
-      <!--TODO: User Bio -->
-    </div>
-    <div class="row">
-      <!--TODO: Location area -->
-    </div>
+  </div>
+  <div class="row">
+    <!--TODO: Location area -->
   </div>
   </div>
   </div>

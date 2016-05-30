@@ -90,30 +90,33 @@
         <input class="form-control" id="inputAge" placeholder="Age">
       </div>
     </div>
+
     <div class="row">
       <label class="col-sm-2">Interests</label>
       <div class="col-sm-6">
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Physical Therapy
+            <input type="checkbox" id="cb1" value=""> Physical Therapy
           </label>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Yoga
+            <input type="checkbox" id="cb2"> Yoga
           </label>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Massage Therapy
+            <input type="checkbox" id="cb3"> Massage Therapy
           </label>
         </div>
       </div>
+
       <fieldset class="form-group">
         <label for="exampleInputFile">Upload profile picture</label>
         <input type="file" class="form-control-file" id="inputProfilePic">
         <small class="text-muted">Your profile picture is public!</small>
       </fieldset>
+
       <!--<div class='col-sm-6'>
       <form class='form-inline' id="file-form" action="handler.php" method="POST">
         <input type="file" id="file-select" name="photos[]" multiple/>
@@ -121,6 +124,14 @@
       </form>
     </div>-->
     </div>
+
+    <div class="form-group row">
+      <label for="inputBio" class="col-sm-6 form-control-label">Profile Bio</label>
+      <div class="col-sm-12">
+        <textarea class="form-control" id="inputBio" rows="5" maxlength="2200" placeholder="Max characters: 2200"></textarea>
+      </div>
+    </div>
+
     <div class="form-group row">
       <div class="col-sm-offset-10 col-sm-10">
         <button type="submit" class="btn btn-secondary">Update</button>
