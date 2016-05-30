@@ -1,4 +1,5 @@
 <template name="nav">
+  {{test}}
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -18,13 +19,18 @@
         <li><a href="{{pathFor 'login'}}">Login</a></li>
         <li><a href="{{pathFor 'register'}}">Register</a></li>
         {{else}}
+        <li><p class="navbar-text" id="navText">{{currentUser.username}}</p></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            {{#with currentUser}}
-            <li><a href="{{pathFor 'profile'}}">Profile</a></li>
-            {{/with}}
-            <li><a href="{{pathFor 'update'}}">Settings</a></li>
+            {{#if isTrainer}}
+              {{#with currentUser}}
+                <li><a href="{{pathFor 'profile'}}">Profile</a></li>
+              {{/with}}
+              <li><a href="{{pathFor 'updateTrainer'}}">Settings</a></li>
+            {{else}}
+              <li><a href="{{pathFor 'updateReg'}}">Settings</a></li>
+            {{/if}}
             <li role="separator" class="divider"></li>
             <li><a href="#" class="logout">Logout</a></li>
           </ul>

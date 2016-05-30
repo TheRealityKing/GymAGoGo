@@ -14,4 +14,22 @@ Template.nav.events({
     Router.go('search', {_id: "search"}, {query: 'q=' + sV});
   }
 });
- //{query: 'q=' + sV}
+
+Template.nav.helpers({
+  'isTrainer': function(){
+    var user = Meteor.user();
+    if(user){
+      if(user.profile.isTrainer){
+        console.log("isTrainer!");
+        return true;
+      }
+      else{
+        console.log("Not Trainer");
+        return false;
+      }
+    }
+    else{
+      console.log("NOT USER");
+    }
+  }
+});

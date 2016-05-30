@@ -11,18 +11,27 @@ TODO:
    });
    This code will deny all client-side updates to the user documents(disabling
    insecure will not change this.)
-Profile pages for users
-Location based searching
-Search button onclick -> form
+
 Get Started button -> onclick slide screen down
 Navbar follows down after hero on home page
 Hero text sizing, text inside button larger
 Area under hero/static navbar after scroll past hero
 User upload profile pic... RIP
-Search routing
+Trainer cost per hour update
+right hand side of trainer profiles
+trainer ratings
+more accurate trainer locations
+additional steps on home page
+better hero1 icon overlay positioning
+Gym-a-go-go icons + create my own for other stuff??
+fix hash anchors. (javascript + DOM?)
 
 COMPLETED:
+Location based searching
+Search button onclick -> form
+Search routing
 Better interests data handling
+Profile pages for users
 profile bio
 location margin-top
 Fix update route + add more update options

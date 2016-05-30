@@ -1,22 +1,37 @@
 .navbar { /* TODO: Only remove bottom margin on home page!!!! */
   margin-bottom: 0px;
 }
+#navText{
+  color: #4582ec;
+}
 .jumbotron {
   position: relative;
-  /*background: #000 url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.brandedscreenprinting.com%2Fwp-content%2Fuploads%2FNew-Years-Fitness-Screen-Printing1.jpg&sp=45990d1181e8599814c956a40eccc782") center center;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  overflow: hidden;
+  background-size: cover;
+}
+
+#hero1{
+  min-height: 610px;
   background:
     linear-gradient(
       rgba(72, 72, 72, 0.75),
       rgba(72, 72, 72, 0.75)
       ),
     url("/hero1.jpeg") center center;
-  /*width: 100%;*/
-  /*height: 100%;*/
-  overflow: hidden;
-  background-size: cover;
-  min-height: 610px;
 }
 
+#hero2{
+  min-width: 100%;
+  min-height: 500px;
+  background:
+    linear-gradient(
+      rgba(252, 244, 197, 0.35),
+      rgba(252, 244, 197, 0.35)
+      ),
+    url("/hero2.jpeg") center center;
+}
 .container.with-top{
   margin-top: 25px;
 }
@@ -34,7 +49,7 @@
 }
 
 #info {
-
+  padding-bottom: 60px;
   padding-top: 30px;
 }
 
@@ -111,12 +126,13 @@
 }
 
 #interestText{
-
+  font-weight: bold;
 }
 
 #searchPic{
   max-height: 200px;
   min-height: 200px;
+  max-width: 250px;
   border-radius: 25px;
 }
 
@@ -124,4 +140,18 @@
   color: #4582ec;
   text-decoration: none;
   hover: black;
+}
+
+#lgi-bg{
+  background-color: #f2f0f0;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+#truncate
+{
+  width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height:50px;
 }

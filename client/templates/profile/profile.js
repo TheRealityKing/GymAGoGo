@@ -4,21 +4,21 @@ Template.profile.events({
 
 Template.profile.helpers({
   ppic: function(){
-    if(Meteor.user()){
-      return "/" + Meteor.user().profile.profilePic;
+    if(this.profile){
+      return "/" + this.profile.profilePic;
     }
   },
   trunc: function(){
-    if(Meteor.user()){
-      return Meteor.user().profile.lastName[0];
+    if(this.profile){
+      return this.profile.lastName[0];
     }
   },
   pint: function(){
     //NOTE: Helpers being called twice
-    if(Meteor.user()){
+    if(this.profile){
       var a = [];
       var text = [];
-      a = Meteor.user().profile.interests;
+      a = this.profile.interests;
       var arr = [
         "Physical Therapy",
         "Yoga",

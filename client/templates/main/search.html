@@ -3,16 +3,33 @@
     <h1>UR SEARCH: {{data}}</h1>
     <ul class="list-group">
       {{#each results}}
-      <li class="list-group-item">
+      {{#if this.profile.isTrainer}}
+      <li class="list-group-item" id="lgi-bg">
       <div class="row">
         <div class="col-sm-3">
         <a href="{{pathFor 'profile' _id=this._id}}"><img src="{{ppic}}" id="searchPic"></a>
         </div>
-        <div class="col-sm-6">
-          <a href="{{pathFor 'profile' _id=this._id}}" id="searchName"><h2>{{name}}</h2></a>
+        <div class="col-sm-8">
+          <a href="{{pathFor 'profile' _id=this._id}}" id="searchName"><h3>{{name}}</h3></a>
+          <p id="interestText">
+            Specialties:
+            {{#each pint}}
+              {{this}},
+            {{/each}}
+          </p>
+          <p id="">
+            <!--{{this.profile.profileBio}}-->
+            {{truncBio}}
+            <a href="{{pathFor 'profile' _id=this._id}}">read more</a>
+          </p>
+          {{this.profile.city}}, {{this.profile.state}}
+        </div>
+        <div class="col-sm-1">
+          $48/hr
         </div>
       </div>
       </li>
+      {{/if}}
       {{/each}}
     </ul>
   </div>

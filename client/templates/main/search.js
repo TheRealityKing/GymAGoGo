@@ -12,10 +12,34 @@ Template.search.helpers({
     console.log(this.profile.profilePic);
     return "/" + this.profile.profilePic;
   },
+  pint: function(){
+    //NOTE: Helpers being called twice
+    var a = [];
+    var text = [];
+    a = this.profile.interests;
+    var arr = [
+      "Physical Therapy",
+      "Yoga",
+      "Massage Therapy"
+    ];
+    //console.log(a.length);
+    for(i = 0; i < a.length; ++i){
+      if(a[i]){
+        //console.log("i: " + i + " arr[i]: " + arr[i]);
+        text.push(arr[i]);
+      }
+    }
+    return text;
+  },
   currID: function(){
     if(Meteor.user()){
       return this.profile._id;
     }
+  },
+  truncBio: function(){
+    var b = this.profile.profileBio.substring(0,280);
+    b = b + "...";
+    return b;
   },
   results: function(){
     //console.log("THIS: " + this);
