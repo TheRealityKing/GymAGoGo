@@ -54,7 +54,7 @@ Template.search.helpers({
     //var search = document.getElementById("searchUsers");
     if(search)
     {
-      //search = search.value.trim();
+      search = search.trim();
       console.log("SEARCH: " + search + "x");
       let results=Meteor.users.find({"profile.zip": search}).fetch();
       if(results){

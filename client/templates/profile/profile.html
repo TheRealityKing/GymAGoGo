@@ -1,5 +1,5 @@
 <template name="profile">
-  <div id="profileMain">
+  <!--<div>  NOTE: whats this div do? -->
   <div id="profileBanner">
   </div>
   <div class="container" id="bioBackground">
@@ -18,16 +18,253 @@
       </p>
       <!--TODO: Add more info -->
     </div>
+      <div class="col-md-4" id="profilePricing">
+        <ul id="pricingList">
+          <li class="pricingItem text-center">Pricing Per Pour - ${{profile.hourlyWage}}/hr</li>
+          <li class="pricingItem text-center">6 Pour Package - ${{sixHour}}/hr</li>
+          <li class="pricingItem text-center">12 Pour Package - ${{twelveHour}}/hr</li>
+          <li class="pricingItem text-center"><a href=""><button class="btn btn-success btn-lg" value="schedul">SCHEDULE SESSIONS</button></a>  </li>
+        </ul>
+      </div>
   </div>
   <div class="row">
-    <!--TODO: User Bio -->
-    <div class=col-sm-8>
+    <div class="col-sm-7">
       {{profile.profileBio}}
     </div>
-  </div>
+    <div class="col-sm-4 col-sm-offset-1" id="fix">
+      <div class="row" id="fix2">
+        <div class="col-sm-6">
+      <div id="box1"></div>
+      Available
+    </div>
+      <div class="col-sm-6">
+      <div id="box2"></div>
+      Unavailable
+    </div>
+      </div>
+      <table id="availability_table">
+        <tbody><tr>
+          <th></th>
+          <th>
+            Mon
+          </th>
+          <th>
+            Tue
+          </th>
+          <th>
+            Wed
+          </th>
+          <th>
+            Thu
+          </th>
+          <th>
+            Fri
+          </th>
+          <th>
+            Sat
+          </th>
+          <th>
+            Sun
+          </th>
+        </tr>
+        <tr>
+          <td class="text-center">
+            6am
+          </td>
+          <td class="available" data-day="Monday" data-hour="6"></td>
+          <td class="available" data-day="Tuesday" data-hour="6"></td>
+          <td class="available" data-day="Wednesday" data-hour="6"></td>
+          <td class="available" data-day="Thursday" data-hour="6"></td>
+          <td class="available" data-day="Friday" data-hour="6"></td>
+          <td class="false" data-day="Saturday" data-hour="6"></td>
+          <td class="false" data-day="Sunday" data-hour="6"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            7am
+          </td>
+          <td class="available" data-day="Monday" data-hour="7"></td>
+          <td class="false" data-day="Tuesday" data-hour="7"></td>
+          <td class="available" data-day="Wednesday" data-hour="7"></td>
+          <td class="false" data-day="Thursday" data-hour="7"></td>
+          <td class="available" data-day="Friday" data-hour="7"></td>
+          <td class="false" data-day="Saturday" data-hour="7"></td>
+          <td class="false" data-day="Sunday" data-hour="7"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            8am
+          </td>
+          <td class="false" data-day="Monday" data-hour="8"></td>
+          <td class="false" data-day="Tuesday" data-hour="8"></td>
+          <td class="false" data-day="Wednesday" data-hour="8"></td>
+          <td class="false" data-day="Thursday" data-hour="8"></td>
+          <td class="false" data-day="Friday" data-hour="8"></td>
+          <td class="false" data-day="Saturday" data-hour="8"></td>
+          <td class="false" data-day="Sunday" data-hour="8"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            9am
+          </td>
+          <td class="false" data-day="Monday" data-hour="9"></td>
+          <td class="available" data-day="Tuesday" data-hour="9"></td>
+          <td class="false" data-day="Wednesday" data-hour="9"></td>
+          <td class="false" data-day="Thursday" data-hour="9"></td>
+          <td class="available" data-day="Friday" data-hour="9"></td>
+          <td class="false" data-day="Saturday" data-hour="9"></td>
+          <td class="false" data-day="Sunday" data-hour="9"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            10am
+          </td>
+          <td class="false" data-day="Monday" data-hour="10"></td>
+          <td class="false" data-day="Tuesday" data-hour="10"></td>
+          <td class="false" data-day="Wednesday" data-hour="10"></td>
+          <td class="false" data-day="Thursday" data-hour="10"></td>
+          <td class="false" data-day="Friday" data-hour="10"></td>
+          <td class="false" data-day="Saturday" data-hour="10"></td>
+          <td class="available" data-day="Sunday" data-hour="10"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            11am
+          </td>
+          <td class="false" data-day="Monday" data-hour="11"></td>
+          <td class="false" data-day="Tuesday" data-hour="11"></td>
+          <td class="false" data-day="Wednesday" data-hour="11"></td>
+          <td class="false" data-day="Thursday" data-hour="11"></td>
+          <td class="false" data-day="Friday" data-hour="11"></td>
+          <td class="false" data-day="Saturday" data-hour="11"></td>
+          <td class="available" data-day="Sunday" data-hour="11"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            12pm
+          </td>
+          <td class="false" data-day="Monday" data-hour="12"></td>
+          <td class="false" data-day="Tuesday" data-hour="12"></td>
+          <td class="false" data-day="Wednesday" data-hour="12"></td>
+          <td class="false" data-day="Thursday" data-hour="12"></td>
+          <td class="false" data-day="Friday" data-hour="12"></td>
+          <td class="false" data-day="Saturday" data-hour="12"></td>
+          <td class="false" data-day="Sunday" data-hour="12"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            1pm
+          </td>
+          <td class="false" data-day="Monday" data-hour="13"></td>
+          <td class="false" data-day="Tuesday" data-hour="13"></td>
+          <td class="false" data-day="Wednesday" data-hour="13"></td>
+          <td class="false" data-day="Thursday" data-hour="13"></td>
+          <td class="false" data-day="Friday" data-hour="13"></td>
+          <td class="false" data-day="Saturday" data-hour="13"></td>
+          <td class="false" data-day="Sunday" data-hour="13"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            2pm
+          </td>
+          <td class="false" data-day="Monday" data-hour="14"></td>
+          <td class="false" data-day="Tuesday" data-hour="14"></td>
+          <td class="false" data-day="Wednesday" data-hour="14"></td>
+          <td class="false" data-day="Thursday" data-hour="14"></td>
+          <td class="false" data-day="Friday" data-hour="14"></td>
+          <td class="false" data-day="Saturday" data-hour="14"></td>
+          <td class="false" data-day="Sunday" data-hour="14"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            3pm
+          </td>
+          <td class="false" data-day="Monday" data-hour="15"></td>
+          <td class="available" data-day="Tuesday" data-hour="15"></td>
+          <td class="false" data-day="Wednesday" data-hour="15"></td>
+          <td class="false" data-day="Thursday" data-hour="15"></td>
+          <td class="available" data-day="Friday" data-hour="15"></td>
+          <td class="false" data-day="Saturday" data-hour="15"></td>
+          <td class="available" data-day="Sunday" data-hour="15"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            4pm
+          </td>
+          <td class="false" data-day="Monday" data-hour="16"></td>
+          <td class="available" data-day="Tuesday" data-hour="16"></td>
+          <td class="false" data-day="Wednesday" data-hour="16"></td>
+          <td class="false" data-day="Thursday" data-hour="16"></td>
+          <td class="available" data-day="Friday" data-hour="16"></td>
+          <td class="false" data-day="Saturday" data-hour="16"></td>
+          <td class="available" data-day="Sunday" data-hour="16"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            5pm
+          </td>
+          <td class="available" data-day="Monday" data-hour="17"></td>
+          <td class="available" data-day="Tuesday" data-hour="17"></td>
+          <td class="available" data-day="Wednesday" data-hour="17"></td>
+          <td class="available" data-day="Thursday" data-hour="17"></td>
+          <td class="false" data-day="Friday" data-hour="17"></td>
+          <td class="false" data-day="Saturday" data-hour="17"></td>
+          <td class="available" data-day="Sunday" data-hour="17"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            6pm
+          </td>
+          <td class="available" data-day="Monday" data-hour="18"></td>
+          <td class="available" data-day="Tuesday" data-hour="18"></td>
+          <td class="available" data-day="Wednesday" data-hour="18"></td>
+          <td class="available" data-day="Thursday" data-hour="18"></td>
+          <td class="available" data-day="Friday" data-hour="18"></td>
+          <td class="false" data-day="Saturday" data-hour="18"></td>
+          <td class="available" data-day="Sunday" data-hour="18"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            7pm
+          </td>
+          <td class="false" data-day="Monday" data-hour="19"></td>
+          <td class="available" data-day="Tuesday" data-hour="19"></td>
+          <td class="available" data-day="Wednesday" data-hour="19"></td>
+          <td class="available" data-day="Thursday" data-hour="19"></td>
+          <td class="available" data-day="Friday" data-hour="19"></td>
+          <td class="false" data-day="Saturday" data-hour="19"></td>
+          <td class="available" data-day="Sunday" data-hour="19"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            8pm
+          </td>
+          <td class="false" data-day="Monday" data-hour="20"></td>
+          <td class="available" data-day="Tuesday" data-hour="20"></td>
+          <td class="false" data-day="Wednesday" data-hour="20"></td>
+          <td class="available" data-day="Thursday" data-hour="20"></td>
+          <td class="available" data-day="Friday" data-hour="20"></td>
+          <td class="false" data-day="Saturday" data-hour="20"></td>
+          <td class="available" data-day="Sunday" data-hour="20"></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            9pm
+          </td>
+          <td class="available" data-day="Monday" data-hour="21"></td>
+          <td class="available" data-day="Tuesday" data-hour="21"></td>
+          <td class="false" data-day="Wednesday" data-hour="21"></td>
+          <td class="available" data-day="Thursday" data-hour="21"></td>
+          <td class="available" data-day="Friday" data-hour="21"></td>
+          <td class="false" data-day="Saturday" data-hour="21"></td>
+          <td class="available" data-day="Sunday" data-hour="21"></td>
+        </tr>
+      </tbody></table>
+      </div>
+    </div>
   <div class="row">
     <!--TODO: Location area -->
   </div>
   </div>
-  </div>
+  <!--</div>-->
 </template>

@@ -17,7 +17,7 @@ Template.updateTrainer.events({
       var ppic = "arnold1.jpeg";
       var pbio = event.target.inputBio.value;
       var user = Meteor.user()._id;
-
+      var pwage = event.target.inputHourlyWage.value;
       /*
       HTTP.call('GET',ppic,{},function(error,response){
         if(error){
@@ -107,6 +107,15 @@ Template.updateTrainer.events({
         } }, function(error){
           if(error){
             console.log("error");
+          }
+        });
+      }
+      if(pwage != ""){
+        Meteor.users.update({_id:user}, { $set: {
+          "profile.hourlyWage": pwage,
+        } }, function(error){
+          if(error){
+            console.log(error);
           }
         });
       }

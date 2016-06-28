@@ -33,5 +33,21 @@ Template.profile.helpers({
       }
       return text;
     }
+  },
+  sixHour: function(){
+    var user = this.profile;
+    if(user){
+      var hourly = user.hourlyWage;
+      hourly -= hourly*(1/10);
+      return Math.ceil(hourly);
+    }
+  },
+  twelveHour: function(){
+    var user = this.profile;
+    if(user){
+      var hourly = user.hourlyWage;
+      hourly -= hourly * (1/7);
+      return Math.ceil(hourly);
+    }
   }
 });

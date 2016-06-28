@@ -1,6 +1,6 @@
 <template name='search'>
   <div class="container">
-    <h1>UR SEARCH: {{data}}</h1>
+    <h1 class="text-center">Zipcode: {{data}}</h1>
     <ul class="list-group">
       {{#each results}}
       {{#if this.profile.isTrainer}}
@@ -25,7 +25,7 @@
           {{this.profile.city}}, {{this.profile.state}}
         </div>
         <div class="col-sm-1">
-          $48/hr
+        <b>${{this.profile.hourlyWage}}</b>/hr
         </div>
       </div>
       </li>

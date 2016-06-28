@@ -11,6 +11,21 @@
   overflow: hidden;
   background-size: cover;
 }
+#jTextResize1{
+  font-size: 45px;
+  margin-bottom: 0px;
+}
+#jTextResize2{
+  font-size: 32px;
+  text-decoration: bold;
+}
+.lowerText{
+  font-size: 30px;
+}
+#brand{
+  max-width: 100%;
+  max-height: 100%;
+}
 
 #hero1{
   min-height: 610px;
@@ -25,31 +40,58 @@
 #hero2{
   min-width: 100%;
   min-height: 500px;
+  margin-bottom: 0px;
   background:
     linear-gradient(
-      rgba(252, 244, 197, 0.35),
-      rgba(252, 244, 197, 0.35)
+      rgba(72, 72, 72, 0.75),
+      rgba(72, 72, 72, 0.75)
       ),
     url("/hero2.jpeg") center center;
+}
+#hero3{
+  min-width: 100%;
+  min-height: 500px;
+  margin-bottom: 0px;
+  background:
+    linear-gradient(
+      rgba(255, 237, 102, 0.15),
+      rgba(255, 237, 102, 0.15)
+      ),
+    url("/hero4.jpg") center center;
+}
+#hero4{
+  min-width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      rgba(255, 237, 102, 0.15),
+      rgba(255, 237, 102, 0.15)
+      ),
+    url("/hero5.jpg") center center;
 }
 .container.with-top{
   margin-top: 25px;
 }
 
-#jtext {
-  color: #4582ec;
+#jtext1 {
   color: #fff;
+}
+#jtext2 {
+  color: white;
+  /*color: #4582ec;*/
 }
 
 .heroOverlap {
   position: absolute;
   max-height: 150px;
-  margin: -115px 0 -20px 550px;
+  margin: -100px 0 0px 577px; /*NOTE: Must be a better way for this*/
+  /*height: 100%;*/
   z-index: 999;
 }
 
 #info {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   padding-top: 30px;
 }
 
@@ -63,11 +105,6 @@
   background-color: #FFFFFF;
 }
 
-
-.col-sm-2.form-control-label {
-  /*padding-right: 0px;*/
-}
-
 #profileBanner{
   min-height: 200px;
   min-width: 100%;
@@ -78,11 +115,8 @@
   max-height: 250px;
   min-height: 250px;
   max-width: 275px;
-
-  padding:1px;
-  /*border:1px solid white;
-  background-color:black;*/
   border-radius: 25px;
+  border:1px solid #C9C9C9;
 }
 
 #profileBannerText{
@@ -114,6 +148,26 @@
   z-scale: 999;
 }
 
+#profilePricing{
+  margin-top: 30px;
+  min-height: 200px;
+  padding:1px;
+  border-radius: 5px;
+  background-color: #f2f0f0;
+  border:1px solid #C9C9C9;
+}
+#pricingList{
+  list-style-type: none;
+  padding: 0px;
+}
+.pricingItem{
+  margin-top: 15px;
+}
+#profilePricingBox{
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
 #cityText{
   color: white;
   margin-top: 0px;
@@ -134,12 +188,16 @@
   min-height: 200px;
   max-width: 250px;
   border-radius: 25px;
+  border:1px solid #C9C9C9;
 }
 
 #searchName{
   color: #4582ec;
   text-decoration: none;
   hover: black;
+}
+#searchPrice{
+  text-decoration: bold;
 }
 
 #lgi-bg{
@@ -154,4 +212,48 @@
   overflow: hidden;
   text-overflow: ellipsis;
   height:50px;
+}
+
+#availability_table{
+  background-color: #f2f0f0;
+  border:1px solid #C9C9C9;
+}
+table, th, td {
+    border:1px solid #C9C9C9;
+    border-collapse: collapse;
+}
+th, td {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.false{
+
+}
+.available{
+  background-color: #5cb85c;
+  border: 1px solid #008a32;
+}
+#fix{
+  margin-top:75px;
+}
+#fix2{
+  margin-bottom:10px;
+}
+#box1{
+  float: left;
+  margin: 0px;
+  min-height: 23px;
+  max-height: 23px;
+  min-width: 49px;
+  max-width: 49px;
+  background-color: #5cb85c;
+}
+#box2{
+  float: left;
+  margin: 0px;
+  min-height: 23px;
+  max-height: 23px;
+  min-width: 49px;
+  max-width: 49px;
+  background-color: #f2f0f0;
 }
