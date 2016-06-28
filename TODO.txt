@@ -1,4 +1,8 @@
 TODO:
+
+NOTE: Everything needed for the project demonstration is finished.
+			The rest of this is for future practice.
+
 *** Deal with database publications - data needs to be private and regulated
    User account restricted content
    Restricted routes
@@ -21,7 +25,7 @@ more accurate trainer locations
 better hero1 icon overlay positioning
 fix hash anchors. (javascript + DOM?)
 no results found search
-fix hero images... it just shows the chicks ass
+fix hero images... 
 
 COMPLETED:
 Location based searching
